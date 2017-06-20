@@ -16,9 +16,9 @@ import com.bank.detail.repositories.SearchInfoRepository;
 @Service
 public class BankDetailService {
 
-	private static final String SUCCESSFUL = "successful";
+	private static final String SUCCESSFUL = "found";
 
-	private static final String UNSUCCESSFUL = "unsuccessful";
+	private static final String UNSUCCESSFUL = "not found";
 
 	private final WebClient soapWebClient;
 
