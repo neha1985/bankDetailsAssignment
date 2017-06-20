@@ -1,6 +1,7 @@
 package com.bank.detail.controller;
 
 import org.springframework.validation.BeanPropertyBindingResult;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -26,6 +27,7 @@ public class BankDetailController {
 		this.helper = helper;
 	}
 
+	@CrossOrigin(origins = "*")
 	@RequestMapping(value = "/{blzcode}", method = RequestMethod.GET)
 	public RestResponse getBankDetails(@PathVariable("blzcode") String code) throws Exception {
 		BeanPropertyBindingResult result = new BeanPropertyBindingResult(code, "blzCode");
